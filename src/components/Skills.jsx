@@ -5,7 +5,7 @@ const Skills = () => {
         return <motion.img
         initial={{opacity:0}}
         whileInView={{opacity:1}}
-        transition={{duration:.5+(Math.random()),ease:'easeOut'}}
+        transition={{duration:.7+(Math.random()),delay:.9+(Math.random()),ease:'easeOut'}}
          src={url} alt="" />
       
     }
