@@ -1,0 +1,114 @@
+.contact-page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: burlywood;
+    padding: 20px;
+    
+  
+}
+
+.contact-page-container {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.contact-page-heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    text-shadow: 3px 3px 6px;
+}
+
+.contact-page-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-page-label {
+    font-size: 23px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-page-input, .contact-page-textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: 1px solid gray;
+}
+
+.contact-page-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-page-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact-page-button:hover {
+    background-color: #0056b3;
+}
+
+.contact-page-details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    font-size: 23px;
+}
+
+.contact-page-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contact-page-detail-item a{
+    text-decoration: none;
+    color: black;
+}
+.contact-page-icon {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 24px;
+}
+.footer{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 9px;
+    font-size: 14px;
+}
+@media (max-width: 600px) {
+    .contact-page-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-page-container {
+        margin: 5px;
+    }
+
+    .contact-page-input, .contact-page-textarea {
+        padding: 8px;
+    }
+
+    .contact-page-button {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
