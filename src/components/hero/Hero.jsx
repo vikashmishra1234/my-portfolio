@@ -22,7 +22,7 @@ const Hero = () => {
     <section id="home" className="hero">
       <motion.div
       initial={{x:-100,opacity:0}}
-      whileInView={{x:0,opacity:1}}
+      animate={{x:0,opacity:1}}
       transition={{duration:.9,ease:'easeOut'}}
        className="about">
         <h1>Hello, I am <span>Vikash</span></h1>
@@ -34,7 +34,7 @@ const Hero = () => {
       </motion.div>
       <motion.div
        initial={{x:100,opacity:0}}
-       whileInView={{x:0,opacity:1}}
+       animate={{x:0,opacity:1}}
        transition={{duration:.9,ease:'easeOut'}}
       >
         <img src={person} alt="Person illustration" />
