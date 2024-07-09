@@ -84,7 +84,7 @@ const Contact = () => {
         </motion.form>
       </div>
 
-      <div className="contact-page-container">
+      {/* <div className="contact-page-container">
         <motion.h2
          initial={{ opacity: 0, y: 20 }}
          whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ const Contact = () => {
             <span>1032 Mathura, Uttar Pradesh, India</span>
           </div>
         </motion.div>
-      </div>
+      </div> */}
     </div>
   );
 };

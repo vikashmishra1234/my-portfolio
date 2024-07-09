@@ -144,19 +144,30 @@ object-fit: contain;
   display: none;
 }
 
-@media screen and (max-width:350px){
+@media screen and (max-width:500px){
   .card{
-   width: 290px;
-   height: fit-content;
+   width: 260px;
+   padding: 15px 10px 10px 10px;
+  height: fit-content;
+  }
+  .card img{
+    height: 48%;
+  }
+  .card-para p{
+    font-size: 18px;
+    
+  }
+  .card-para h2{
+    font-size: 20px;
   }
 }
 @media screen and (max-width:600px){
-  .max-carousel{
+  /* .max-carousel{
     display: none;
   }
   .min-carousel{
     display: block;
-  }
+  } */
   .ham{
     display: block;
   }
