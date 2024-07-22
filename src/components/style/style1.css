@@ -139,6 +139,7 @@
 
 .skills{
   background-color: #b2772b;
+  padding: 20px;
 }
 .images{
   display: flex;
@@ -148,7 +149,7 @@
 .images img{
  flex: 1 0 23.33%;
 object-fit: contain;
-  height: 238px;
+  height: 180px;
   /* background-color: transparent; */
   mix-blend-mode: multiply;
  

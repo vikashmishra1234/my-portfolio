@@ -34,8 +34,8 @@ const Contact = () => {
     <div id="contact" className="contact-page-wrapper">
       <div className="contact-page-container">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           className="contact-page-heading"
         >
@@ -44,7 +44,7 @@ const Contact = () => {
         <motion.form
          initial={{ opacity: 0 }}
          whileInView={{ opacity: 1 }}
-         transition={{ duration: 1,delay:1 }}
+         transition={{ duration: 1,delay:.2 }}
          onSubmit={sendEmail} ref={form} className="contact-page-form">
           <label htmlFor="name" className="contact-page-label">
             Name:
