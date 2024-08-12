@@ -94,9 +94,20 @@
     font-size: 14px;
 }
 @media (max-width: 600px) {
+    .contact-page-heading{
+        font-size: 2.6rem;
+    }
+    .contact-page-button{
+        font-size: 17px !important;
+    }
     .contact-page-wrapper {
         flex-direction: column;
         align-items: center;
+    }.contact-page-label {
+        font-size: 19px;
+    }
+    .contact-page-input{
+        font-size: 17px;
     }
 
     .contact-page-container {
