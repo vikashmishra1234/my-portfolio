@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import person from "../../assets/person.svg";
-import resume from "../../assets/vikashmishraresume.pdf";
+import resume from "../../assets/Vikash-Resume.pdf";
 import Navbar from "../Navbar";
 const Hero = () => {
   const [skill, setSkill] = useState("WebDeveloper");
@@ -49,7 +49,7 @@ const Hero = () => {
           </p>
           <div className="social">
             <div>
-              <a href={resume} download="resume.pdf" class="download-button">
+              <a href={resume} download="Vikash-Resume.pdf" className="download-button">
                 My Resume
               </a>
             </div>

@@ -1,24 +1,25 @@
-import Navbar from "./components/Navbar"
-import Projects from "./components/Projects/Projects"
-import Skills from "./components/Skills"
-import Hero from "./components/hero/Hero"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
+import { Suspense, lazy } from "react";
 
+const Navbar = lazy(() => import("./components/Navbar"));
+const Projects = lazy(() => import("./components/Projects/Projects"));
+const Skills = lazy(() => import("./components/Skills"));
+const Hero = lazy(() => import("./components/hero/Hero"));
+const Contact = lazy(() => import("./components/Contact"));
+const Footer = lazy(() => import("./components/Footer"));
 
 function App() {
-
-
   return (
     <>
- 
-   <Hero/>
-   <Projects/>
-   <Skills/>
-   <Contact/>
-   <Footer/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navbar />
+        <Hero />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
+      </Suspense>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

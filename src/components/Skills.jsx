@@ -58,7 +58,7 @@ const Skills = () => {
           <motion.div className='div'
            drag
            dragConstraints={{ left: 0, right: 50, top: -40, bottom: 10 }}
-          >Redish</motion.div>
+          >Redis</motion.div>
           <motion.div className='div'
            drag
            dragConstraints={{ left: 0, right: 50, top: -40, bottom: 10 }}
