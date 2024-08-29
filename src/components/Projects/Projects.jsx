@@ -35,7 +35,7 @@ const Projects = () => {
             discription={
               "devotee can find the priests in vrindavan-mathura,Popular temples with their timings,best restourants,priests profile management."
             }
-            link1={"https://tourist-guide-ashen.vercel.app/"}
+            link1={"https://priest-finder-web-app.onrender.com/"}
             link2={"https://github.com/vikashmishra1234/Tourist-guide"}
           />
         </motion.div>
