@@ -1,7 +1,5 @@
 import React from "react";
 import Card from "./Card";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import { motion } from "framer-motion";
 import student from "../../assets/studextX1.jpg";
 import flipkart from "../../assets/Flipkart.jpg";
@@ -12,97 +10,86 @@ import tracker from "../../assets/tracker.png";
 
 const Projects = () => {
   return (
-    <section id="project" className="project">
-      <div className="project-heading">
-        <motion.div>
-          <h2>My Projects</h2>
+    <section id="projects" className="py-12 bg-gray-700">
+      <div className="text-center mb-8">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2 }}
+        >
+          <h2 className="text-6xl font-bold text-white">My Projects</h2>
         </motion.div>
-        <motion.div>
-          <p>Check Out My Projects.</p>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.4 }}
+        >
+          <p className="text-2xl text-gray-100 mt-2">
+            Check out my latest work.
+          </p>
         </motion.div>
       </div>
-      <motion.div className="max-carousel">
-        <motion.div
-         initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.6, ease: "easeOut" }}
-        
-        >
+
+      <motion.div
+        className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.6, ease: "easeOut" }}
+      >
+        <motion.div>
           <Card
-          
             image={priest}
             title={"The Priest Finder"}
             discription={
-              "devotee can find the priests in vrindavan-mathura,Popular temples with their timings,best restourants,priests profile management."
+              "Devotees can find priests in Vrindavan-Mathura, view popular temples and timings, and manage priests' profiles."
             }
             link1={"https://priest-finder-web-app.onrender.com/"}
             link2={"https://github.com/vikashmishra1234/Tourist-guide"}
           />
         </motion.div>
-        <motion.div
-         initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.6, ease: "easeOut" }}
-        
-        >
-          
+
+        <motion.div>
           <Card
-          
             image={image}
-            title={"Hostle Website For College"}
+            title={"Hostel Website for College"}
             discription={
-              "A website for the BSA College Hoslte. Which includes a dedicated section for hostler and admin "
+              "A website for BSA College Hostel. It includes a section for both hostlers and administrators."
             }
             link1={"https://bsa-hostle-website.vercel.app/"}
             link2={"https://github.com/vikashmishra1234/Hostle-management"}
           />
         </motion.div>
-        <motion.div
-         initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.6, ease: "easeOut" }}
-        
-        >
+
+        <motion.div>
           <Card
-          
             image={student}
             title={"E-Learning Platform"}
             discription={
-              "Web app for students to share notes,Integrated AI chatbot using google gemini."
+              "Web app for students to share notes, with an integrated AI chatbot using Google Gemini."
             }
             link1={"https://colleges-notes-websites.vercel.app/"}
             link2={"https://github.com/vikashmishra1234/StudentX"}
           />
         </motion.div>
-        <motion.div
-         initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.6, ease: "easeOut" }}
-        
-        >
+
+        <motion.div>
           <Card
-          
             image={flipkart}
-            title={"E-commerce clone"}
+            title={"E-commerce Clone"}
             discription={
-              "A clone of the Flipkart,which has fuctionality to search,add to cart ,filter and Place the order."
+              "A clone of Flipkart with functionality to search, add to cart, filter, and place orders."
             }
             link1={"https://github.com/vikashmishra1234/Flipkart-clone"}
             link2={"https://github.com/vikashmishra1234/Flipkart-clone"}
           />
         </motion.div>
 
-        <motion.div
-         initial={{ opacity: 0 }}
-         whileInView={{ opacity: 1 }}
-         transition={{ duration: 1.6, ease: "easeOut" }}
-        >
+        <motion.div>
           <Card
-          
             image={instagram}
-            title={"social media web app"}
+            title={"Social Media Web App"}
             discription={
-              "Social media web app ,where you can connect with with many people ,make vedio calls, share post add stories , also you can like dislike the post "
+              "Social media web app to connect with people, make video calls, share posts, add stories, and like or dislike posts."
             }
             link1={"https://social-app-psi-six.vercel.app/"}
             link2={
@@ -110,18 +97,13 @@ const Projects = () => {
             }
           />
         </motion.div>
-        <motion.div
-         initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.6, ease: "easeOut" }}
-        
-        >
+
+        <motion.div>
           <Card
-          
             image={tracker}
             title={"Expense Tracker"}
             discription={
-              "A website to track expenses and income of an indivisual."
+              "A website to track expenses and income of individuals."
             }
             link1={"https://expense-tracker-tan-three.vercel.app/"}
             link2={"https://github.com/vikashmishra1234/Expense-Tracker"}
