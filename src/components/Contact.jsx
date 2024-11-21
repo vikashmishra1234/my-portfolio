@@ -13,22 +13,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_u636c7q", "template_pi4mh7a", form.current, {
-        publicKey: "Ff0ehUacs-SPxliQT",
-      })
-      .then(
-        () => {
-          Swal.fire({
-            icon: "success",
-            title: "message sent",
-          });
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    
   };
   return (
     <div id="contact" className="contact-page-wrapper">
