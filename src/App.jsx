@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import Finger from "./components/Finger";
-
+// import ServicesSection from "./components/services/Services";
+const ServicesSection = lazy(()=>import('./components/services/Services'))
 const Navbar = lazy(() => import("./components/Navbar"));
 const Projects = lazy(() => import("./components/Projects/Projects"));
 const Skills = lazy(() => import("./components/Skills"));
@@ -15,6 +16,7 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
       {/* <Finger/> */}
         <Hero />
+        <ServicesSection/>
         <Projects />
         <Skills />
         <Contact />
