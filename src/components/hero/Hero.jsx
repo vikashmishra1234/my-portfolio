@@ -70,7 +70,7 @@ const Hero = () => {
               <div className="relative w-full aspect-square">
                 <div className="absolute inset-0 bg-[#deb887] rounded-full filter blur-3xl opacity-50"></div>
                 <img 
-                  src="https://gifdb.com/images/thumbnail/programming-stick-figure-going-crazy-on-fire-j6ii4pju9xdtnsbr.gif" 
+                  src="https://gifdb.com/images/high/programming-angry-punching-keyboard-fw45yh2e39g24ylb.gif" 
                   alt="Person illustration" 
                   className="relative z-10 w-full h-full object-contain"
                 />

@@ -6,6 +6,8 @@ import Card from "./Card";
 import student from "../../assets/studextX1.jpg";
 import flipkart from "../../assets/Flipkart.jpg";
 import image from "../../assets/image.png";
+import scrap from "../../assets/scrap.png"
+import books from "../../assets/books.png"
 import priest from "../../assets/priest.jpg";
 import instagram from "../../assets/instagram.jpg";
 import tracker from "../../assets/tracker.png";
@@ -22,8 +24,22 @@ const projectData = [
     image: image,
     title: "Hostel Website for College",
     description: "A website for BSA College Hostel. It includes a section for both hostlers and administrators.",
-    link1: "https://hostle-nextjs.vercel.app",
+    link1: "https://bsacollegehostel.vercel.app/",
     link2: "https://github.com/vikashmishra1234/Hostle-Nextjs",
+  },
+  {
+    image: scrap,
+    title: "ChatGpt Conversation to pdf Converter",
+    description: "Save your Conversation with chat gpt in a pdf formate.this is a scraping project...",
+    link1: "https://chatgptpdf.vercel.app/",
+    link2: "https://github.com/vikashmishra1234/scrape-gpt",
+  },
+  {
+    image: books,
+    title: "Books Selling Website With Payment Gateway",
+    description: "In this website i am selling books,previous year papers and notes to the college student with realtime razor pay gateway",
+    link1: "https://books-selling.vercel.app/",
+    link2: "https://github.com/vikashmishra1234/books-selling",
   },
   {
     image: student,
@@ -39,20 +55,20 @@ const projectData = [
     link1: "https://github.com/vikashmishra1234/Flipkart-clone",
     link2: "https://github.com/vikashmishra1234/Flipkart-clone",
   },
-  {
-    image: instagram,
-    title: "Social Media Web App",
-    description: "Social media web app to connect with people, make video calls, share posts, add stories, and like or dislike posts.",
-    link1: "https://social-app-psi-six.vercel.app/",
-    link2: "https://github.com/vikashmishra1234/backend-expense-tracker",
-  },
-  {
-    image: tracker,
-    title: "Expense Tracker",
-    description: "A website to track expenses and income of individuals.",
-    link1: "https://expense-tracker-tan-three.vercel.app/",
-    link2: "https://github.com/vikashmishra1234/Expense-Tracker",
-  },
+  // {
+  //   image: instagram,
+  //   title: "Social Media Web App",
+  //   description: "Social media web app to connect with people, make video calls, share posts, add stories, and like or dislike posts.",
+  //   link1: "https://social-app-psi-six.vercel.app/",
+  //   link2: "https://github.com/vikashmishra1234/backend-expense-tracker",
+  // },
+  // {
+  //   image: tracker,
+  //   title: "Expense Tracker",
+  //   description: "A website to track expenses and income of individuals.",
+  //   link1: "https://expense-tracker-tan-three.vercel.app/",
+  //   link2: "https://github.com/vikashmishra1234/Expense-Tracker",
+  // },
 ];
 
 const Projects = () => {
