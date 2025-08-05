@@ -1,21 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Code, 
-  Database, 
-  Layout, 
-  Smartphone, 
-  Globe, 
-  Zap,
-  Menu,
-  X,
-  Home,
-  FolderOpen,
-  User,
-  Mail,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+
 const Skills = () => {
   const skillCategories = [
     {
@@ -48,42 +32,42 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-gradient-to-b from-slate-900 to-gray-900 relative overflow-hidden">
+    <section id="skills" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-slate-900 to-gray-900 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/3 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-emerald-500/5 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 right-1/3 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-blue-500/5 rounded-full filter blur-xl sm:blur-2xl md:blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-emerald-500/5 rounded-full filter blur-xl sm:blur-2xl md:blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 md:mb-20"
         >
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="inline-block mb-6"
+            className="inline-block mb-4 sm:mb-6"
           >
-            <span className="text-emerald-400 font-mono text-lg">&gt; skills.filter(expert)</span>
+            <span className="text-emerald-400 font-mono text-sm sm:text-base md:text-lg">&gt; skills.filter(expert)</span>
           </motion.div>
 
-          <h2 className="text-5xl md:text-7xl font-black mb-8 bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 sm:mb-8 bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Tech Arsenal
           </h2>
           
-          <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed">
             Mastering the latest technologies and frameworks to build scalable, 
             performant applications that drive business success.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.category}
@@ -91,13 +75,13 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
-              className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-500/30 transition-all duration-500"
+              className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-cyan-500/30 transition-all duration-500"
             >
-              <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
                 {category.category}
               </h3>
               
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
@@ -107,16 +91,16 @@ const Skills = () => {
                     transition={{ duration: 0.5, delay: (categoryIndex * 0.2) + (skillIndex * 0.1) }}
                     className="group"
                   >
-                    <div className="flex justify-between items-center mb-3">
-                      <span className="text-slate-200 font-medium group-hover:text-white transition-colors duration-300">
+                    <div className="flex justify-between items-center mb-2 sm:mb-3">
+                      <span className="text-slate-200 text-sm sm:text-base font-medium group-hover:text-white transition-colors duration-300">
                         {skill.name}
                       </span>
-                      <span className="text-cyan-400 font-mono text-sm">
+                      <span className="text-cyan-400 font-mono text-xs sm:text-sm">
                         {skill.level}%
                       </span>
                     </div>
                     
-                    <div className="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden">
+                    <div className="w-full bg-slate-700/50 rounded-full h-1.5 sm:h-2 overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
@@ -140,9 +124,9 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20 text-center"
+          className="mt-12 sm:mt-16 md:mt-20 text-center"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {[
               { label: 'Years Experience', value: '3+', color: 'cyan' },
               { label: 'Projects Completed', value: '50+', color: 'emerald' },
@@ -157,10 +141,10 @@ const Skills = () => {
                 transition={{ duration: 0.5, delay: 0.6 + (index * 0.1) }}
                 className="text-center"
               >
-                <div className={`text-3xl md:text-4xl font-black mb-2 text-${stat.color}-400`}>
+                <div className={`text-2xl sm:text-3xl md:text-4xl font-black mb-1 sm:mb-2 text-${stat.color}-400`}>
                   {stat.value}
                 </div>
-                <div className="text-slate-400 font-mono text-sm">
+                <div className="text-xs sm:text-sm text-slate-400 font-mono">
                   {stat.label}
                 </div>
               </motion.div>

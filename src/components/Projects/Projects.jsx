@@ -1,88 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Code, 
-  Database, 
-  Layout, 
-  Smartphone, 
-  Globe, 
-  Zap,
-  Menu,
-  X,
-  Home,
-  FolderOpen,
-  User,
-  Mail,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
+import { motion } from "framer-motion";
+import { Code, Globe, ArrowRight } from "lucide-react";
+import projectData from "../../../project.json";
 
 const Projects = () => {
-  const projectData = [
-    {
-      title: "The Priest Finder",
-      description: "Full-stack temple guide application connecting devotees with priests in Vrindavan-Mathura. Features real-time priest profiles, temple timings, and location services.",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
-      category: "Full-Stack Web App",
-      liveLink: "https://priest-finder-web-app.onrender.com/",
-      githubLink: "https://github.com/vikashmishra1234/Tourist-guide",
-      features: ["Real-time Search", "Profile Management", "Location Services"]
-    },
-    {
-      title: "Smart Hostel Management",
-      description: "Comprehensive hostel management system for BSA College with dual interfaces for students and administrators. Streamlines accommodation processes and communication.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
-      category: "Education Platform",
-      liveLink: "https://bsacollegehostel.vercel.app/",
-      githubLink: "https://github.com/vikashmishra1234/Hostle-Nextjs",
-      features: ["Admin Dashboard", "Student Portal", "Real-time Updates"]
-    },
-    {
-      title: "ChatGPT PDF Converter",
-      description: "Innovative web scraping tool that converts ChatGPT conversations into professional PDF documents. Perfect for preserving important AI conversations.",
-      technologies: ["React", "Web Scraping", "PDF Generation", "Node.js"],
-      category: "Productivity Tool",
-      liveLink: "https://chatgptpdf.vercel.app/",
-      githubLink: "https://github.com/vikashmishra1234/scrape-gpt",
-      features: ["Auto Scraping", "PDF Export", "Clean Formatting"]
-    },
-    {
-      title: "EduBooks Marketplace",
-      description: "E-commerce platform for college students selling books, previous year papers, and study notes with integrated Razorpay payment gateway.",
-      technologies: ["React", "Node.js", "Razorpay", "MongoDB"],
-      category: "E-commerce Platform",
-      liveLink: "https://books-selling.vercel.app/",
-      githubLink: "https://github.com/vikashmishra1234/books-selling",
-      features: ["Payment Gateway", "Inventory Management", "Student Dashboard"]
-    },
-    {
-      title: "AI-Powered Learning Hub",
-      description: "Modern e-learning platform with integrated Google Gemini AI chatbot for personalized learning assistance and note sharing among students.",
-      technologies: ["React", "Google Gemini AI", "Firebase", "Material-UI"],
-      category: "EdTech Platform",
-      liveLink: "https://student-study-website.vercel.app/",
-      githubLink: "https://github.com/vikashmishra1234/Student-Study-website",
-      features: ["AI Chatbot", "Note Sharing", "Progress Tracking"]
-    },
-    {
-      title: "FlipCart E-commerce Clone",
-      description: "Feature-rich Flipkart clone with advanced search, filtering, cart management, and order processing capabilities. Built with modern React patterns.",
-      technologies: ["React", "Redux", "CSS3", "Local Storage"],
-      category: "E-commerce Clone",
-      liveLink: "https://github.com/vikashmishra1234/Flipkart-clone",
-      githubLink: "https://github.com/vikashmishra1234/Flipkart-clone",
-      features: ["Advanced Search", "Cart Management", "Order Processing"]
-    }
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -91,46 +19,52 @@ const Projects = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: 'spring',
+        type: "spring",
         stiffness: 100,
-        damping: 15
-      }
-    }
+        damping: 15,
+      },
+    },
   };
 
   return (
-    <section id="projects" className="py-24 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-12 md:py-24 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900 relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/6 w-64 h-64 bg-blue-500/5 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/6 w-80 h-80 bg-emerald-500/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/6 w-32 h-32 md:w-64 md:h-64 bg-blue-500/5 rounded-full filter blur-xl md:blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/6 w-40 h-40 md:w-80 md:h-80 bg-emerald-500/5 rounded-full filter blur-xl md:blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-20"
         >
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="inline-block mb-6"
+            className="inline-block mb-4 md:mb-6"
           >
-            <span className="text-blue-400 font-mono text-lg">&gt; projects.showcase()</span>
+            <span className="text-blue-400 font-mono text-sm md:text-lg">
+              &gt; projects.showcase()
+            </span>
           </motion.div>
 
-          <h2 className="text-5xl md:text-7xl font-black mb-8 bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6 md:mb-8 bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
             Featured Work
           </h2>
-          
-          <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            Showcasing innovative solutions that solve real-world problems. Each project demonstrates 
-            technical excellence, user-centric design, and business impact.
+
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            Showcasing innovative solutions that solve real-world problems. Each
+            project demonstrates technical excellence, user-centric design, and
+            business impact.
           </p>
         </motion.div>
 
@@ -139,7 +73,7 @@ const Projects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2"
         >
           {projectData.map((project, index) => (
             <motion.div
@@ -147,15 +81,15 @@ const Projects = () => {
               variants={itemVariants}
               className="group relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-              
-              <div className="relative bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 h-full transition-all duration-500 group-hover:border-blue-500/30 group-hover:shadow-lg group-hover:shadow-blue-500/10">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 rounded-xl sm:rounded-2xl blur-lg sm:blur-xl group-hover:blur-xl sm:group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+
+              <div className="relative bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl sm:rounded-2xl p-6 sm:p-8 h-full transition-all duration-500 group-hover:border-blue-500/30 group-hover:shadow-lg group-hover:shadow-blue-500/10">
                 {/* Project Category */}
-                <div className="flex items-center justify-between mb-6">
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full font-mono border border-blue-500/30">
+                <div className="flex items-center justify-between mb-4 sm:mb-6">
+                  <span className="px-2 py-1 sm:px-3 sm:py-1 bg-blue-500/20 text-blue-400 text-xs sm:text-sm rounded-full font-mono border border-blue-500/30">
                     {project.category}
                   </span>
-                  <div className="flex space-x-3">
+                  <div className="flex space-x-2 sm:space-x-3">
                     <motion.a
                       href={project.liveLink}
                       target="_blank"
@@ -163,7 +97,7 @@ const Projects = () => {
                       whileHover={{ scale: 1.1 }}
                       className="text-slate-400 hover:text-emerald-400 transition-colors duration-300"
                     >
-                      <Globe className="w-5 h-5" />
+                      <Globe className="w-4 h-4 sm:w-5 sm:h-5" />
                     </motion.a>
                     <motion.a
                       href={project.githubLink}
@@ -172,29 +106,31 @@ const Projects = () => {
                       whileHover={{ scale: 1.1 }}
                       className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
                     >
-                      <Code className="w-5 h-5" />
+                      <Code className="w-4 h-4 sm:w-5 sm:h-5" />
                     </motion.a>
                   </div>
                 </div>
 
                 {/* Project Title */}
-                <h3 className="text-2xl font-bold mb-4 text-slate-200 group-hover:text-white transition-colors duration-300">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-slate-200 group-hover:text-white transition-colors duration-300">
                   {project.title}
                 </h3>
-                
+
                 {/* Project Description */}
-                <p className="text-slate-400 mb-6 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                <p className="text-sm sm:text-base text-slate-400 mb-4 sm:mb-6 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
                   {project.description}
                 </p>
-                
+
                 {/* Key Features */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-mono text-emerald-400 mb-3">Key Features:</h4>
-                  <div className="flex flex-wrap gap-2">
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="text-xs sm:text-sm font-mono text-emerald-400 mb-2 sm:mb-3">
+                    Key Features:
+                  </h4>
+                  <div className="flex flex-wrap gap-1 sm:gap-2">
                     {project.features.map((feature, featureIndex) => (
                       <span
                         key={featureIndex}
-                        className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded font-mono border border-slate-600/50"
+                        className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-slate-700/50 text-slate-300 text-xs rounded font-mono border border-slate-600/50"
                       >
                         {feature}
                       </span>
@@ -203,13 +139,15 @@ const Projects = () => {
                 </div>
 
                 {/* Technologies */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-mono text-cyan-400 mb-3">Tech Stack:</h4>
-                  <div className="flex flex-wrap gap-2">
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="text-xs sm:text-sm font-mono text-cyan-400 mb-2 sm:mb-3">
+                    Tech Stack:
+                  </h4>
+                  <div className="flex flex-wrap gap-1 sm:gap-2">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-full font-mono border border-cyan-500/30"
+                        className="px-2 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-xs sm:text-sm rounded-full font-mono border border-cyan-500/30"
                       >
                         {tech}
                       </span>
@@ -218,13 +156,13 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-3">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                   <motion.a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 5 }}
-                    className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-4 rounded-xl font-mono font-medium text-center transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+                    className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-2 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl font-mono text-sm sm:text-base font-medium text-center transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
                   >
                     Live Demo
                   </motion.a>
@@ -233,7 +171,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 5 }}
-                    className="flex-1 border-2 border-emerald-500 text-emerald-400 py-3 px-4 rounded-xl font-mono font-medium text-center transition-all duration-300 hover:bg-emerald-500 hover:text-slate-900"
+                    className="flex-1 border border-emerald-500 sm:border-2 text-emerald-400 py-2 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl font-mono text-sm sm:text-base font-medium text-center transition-all duration-300 hover:bg-emerald-500 hover:text-slate-900"
                   >
                     Source Code
                   </motion.a>
@@ -249,18 +187,18 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-20"
+          className="text-center mt-12 sm:mt-16 md:mt-20"
         >
-          <p className="text-slate-400 mb-6 font-mono">
+          <p className="text-sm sm:text-base text-slate-400 mb-4 sm:mb-6 font-mono">
             Interested in working together?
           </p>
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
-            className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white py-3 px-8 rounded-xl font-mono font-medium transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25"
+            className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white py-2 px-6 sm:py-3 sm:px-8 rounded-lg sm:rounded-xl font-mono text-sm sm:text-base font-medium transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25"
           >
             Start a Project
-            <ArrowRight className="ml-2 w-4 h-4" />
+            <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
           </motion.a>
         </motion.div>
       </div>

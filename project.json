@@ -1,0 +1,56 @@
+[
+    {
+      "title": "The Priest Finder",
+      "description": "Full-stack temple guide application connecting devotees with priests in Vrindavan-Mathura. Features real-time priest profiles, temple timings, and location services.",
+      "technologies": ["React", "Node.js", "MongoDB", "Express"],
+      "category": "Full-Stack Web App",
+      "liveLink": "https://priest-finder-web-app.onrender.com/",
+      "githubLink": "https://github.com/vikashmishra1234/Tourist-guide",
+      "features": ["Real-time Search", "Profile Management", "Location Services"]
+    },
+    {
+      "title": "Smart Hostel Management",
+      "description": "Comprehensive hostel management system for BSA College with dual interfaces for students and administrators. Streamlines accommodation processes and communication.",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
+      "category": "Education Platform",
+      "liveLink": "https://bsacollegehostel.vercel.app/",
+      "githubLink": "https://github.com/vikashmishra1234/Hostle-Nextjs",
+      "features": ["Admin Dashboard", "Student Portal", "Real-time Updates"]
+    },
+    {
+      "title": "ChatGPT PDF Converter",
+      "description": "Innovative web scraping tool that converts ChatGPT conversations into professional PDF documents. Perfect for preserving important AI conversations.",
+      "technologies": ["React", "Web Scraping", "PDF Generation", "Node.js"],
+      "category": "Productivity Tool",
+      "liveLink": "https://chatgptpdf.vercel.app/",
+      "githubLink": "https://github.com/vikashmishra1234/scrape-gpt",
+      "features": ["Auto Scraping", "PDF Export", "Clean Formatting"]
+    },
+    {
+      "title": "EduBooks Marketplace",
+      "description": "E-commerce platform for college students selling books, previous year papers, and study notes with integrated Razorpay payment gateway.",
+      "technologies": ["React", "Node.js", "Razorpay", "MongoDB"],
+      "category": "E-commerce Platform",
+      "liveLink": "https://books-selling.vercel.app/",
+      "githubLink": "https://github.com/vikashmishra1234/books-selling",
+      "features": ["Payment Gateway", "Inventory Management", "Student Dashboard"]
+    },
+    {
+      "title": "AI-Powered Learning Hub",
+      "description": "Modern e-learning platform with integrated Google Gemini AI chatbot for personalized learning assistance and note sharing among students.",
+      "technologies": ["React", "Google Gemini AI", "Firebase", "Material-UI"],
+      "category": "EdTech Platform",
+      "liveLink": "https://student-study-website.vercel.app/",
+      "githubLink": "https://github.com/vikashmishra1234/Student-Study-website",
+      "features": ["AI Chatbot", "Note Sharing", "Progress Tracking"]
+    },
+    {
+      "title": "FlipCart E-commerce Clone",
+      "description": "Feature-rich Flipkart clone with advanced search, filtering, cart management, and order processing capabilities. Built with modern React patterns.",
+      "technologies": ["React", "Redux", "CSS3", "Local Storage"],
+      "category": "E-commerce Clone",
+      "liveLink": "https://github.com/vikashmishra1234/Flipkart-clone",
+      "githubLink": "https://github.com/vikashmishra1234/Flipkart-clone",
+      "features": ["Advanced Search", "Cart Management", "Order Processing"]
+    }
+  ]
