@@ -1,12 +1,12 @@
 [
     {
-      "title": "The Priest Finder",
-      "description": "Full-stack temple guide application connecting devotees with priests in Vrindavan-Mathura. Features real-time priest profiles, temple timings, and location services.",
-      "technologies": ["React", "Node.js", "MongoDB", "Express"],
-      "category": "Full-Stack Web App",
-      "liveLink": "https://priest-finder-web-app.onrender.com/",
-      "githubLink": "https://github.com/vikashmishra1234/Tourist-guide",
-      "features": ["Real-time Search", "Profile Management", "Location Services"]
+      "title": "Varnika Research",
+      "description": "A professional academic writing platform offering thesis, dissertation, and research paper services for students and researchers.",
+      "technologies": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+      "category": "Frontend Web App",
+      "liveLink": "https://varnikaresearch.com/",
+      "githubLink": "#",
+      "features": ["Service Listings & Forms", "SEO-Optimized Pages", "Secure Contact & Quote Requests"]
     },
     {
       "title": "Smart Hostel Management",
@@ -18,15 +18,6 @@
       "features": ["Admin Dashboard", "Student Portal", "Real-time Updates"]
     },
     {
-      "title": "ChatGPT PDF Converter",
-      "description": "Innovative web scraping tool that converts ChatGPT conversations into professional PDF documents. Perfect for preserving important AI conversations.",
-      "technologies": ["React", "Web Scraping", "PDF Generation", "Node.js"],
-      "category": "Productivity Tool",
-      "liveLink": "https://chatgptpdf.vercel.app/",
-      "githubLink": "https://github.com/vikashmishra1234/scrape-gpt",
-      "features": ["Auto Scraping", "PDF Export", "Clean Formatting"]
-    },
-    {
       "title": "EduBooks Marketplace",
       "description": "E-commerce platform for college students selling books, previous year papers, and study notes with integrated Razorpay payment gateway.",
       "technologies": ["React", "Node.js", "Razorpay", "MongoDB"],
@@ -36,21 +27,31 @@
       "features": ["Payment Gateway", "Inventory Management", "Student Dashboard"]
     },
     {
-      "title": "AI-Powered Learning Hub",
-      "description": "Modern e-learning platform with integrated Google Gemini AI chatbot for personalized learning assistance and note sharing among students.",
-      "technologies": ["React", "Google Gemini AI", "Firebase", "Material-UI"],
-      "category": "EdTech Platform",
-      "liveLink": "https://student-study-website.vercel.app/",
-      "githubLink": "https://github.com/vikashmishra1234/Student-Study-website",
-      "features": ["AI Chatbot", "Note Sharing", "Progress Tracking"]
+      "title": "Anna Perry Insurance",
+      "description": "A bilingual insurance website offering detailed service information in both Russian and English. Built to serve clients across multiple insurance domains...",
+      "technologies": ["wordpress", "GT Translator", "Elementor", "WPForms"],
+      "category": "Business Website",
+      "liveLink": "https://annaperryinsurance.com/",
+      "githubLink": "https://github.com/vikashmishra1234/",
+      "features": [" Bilingual Support (RU/EN)", " Service Pages", "Responsive Contact Form"]
     },
     {
-      "title": "FlipCart E-commerce Clone",
-      "description": "Feature-rich Flipkart clone with advanced search, filtering, cart management, and order processing capabilities. Built with modern React patterns.",
-      "technologies": ["React", "Redux", "CSS3", "Local Storage"],
-      "category": "E-commerce Clone",
-      "liveLink": "https://github.com/vikashmishra1234/Flipkart-clone",
-      "githubLink": "https://github.com/vikashmishra1234/Flipkart-clone",
-      "features": ["Advanced Search", "Cart Management", "Order Processing"]
+      "title": "JMI Sports DC",
+      "description": "A modern and responsive website for JMI Sports DC, showcasing their sports marketing partnerships, services, and media presence.",
+      "technologies": ["wordpress", "GT Translator", "Elementor", "WPForms"],
+      "category": "Sports Business Website",
+      "liveLink": "https://jmisportsdc.com/",
+      "githubLink": "https://github.com/vikashmishra1234",
+      "features": [" Partnership Showcase", " Media & News Sections", "Fully Responsive Layout"]
+    },
+    {
+      "title": "Lorain Kartplex",
+      "description": "A high-performance website for Lorain Kartplex, a premier go-kart racing facility. Designed for speed and user experience, the site includes event booking...",
+      "technologies": ["wordpress", "GT Translator", "Elementor", "WPForms"],
+      "category": " Business Website",
+      "liveLink": "https://www.lorainkartplex.com/",
+      "githubLink": "https://github.com/vikashmishra1234",
+      "features": [" Event & Pricing Information", " Track Overview & Gallery", "Mobile-Optimized Design"]
     }
+
   ]
