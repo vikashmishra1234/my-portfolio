@@ -69,33 +69,7 @@ const Contact = () => {
         </motion.form>
       </div>
 
-      {/* <div className="contact-page-container">
-        <motion.h2
-         initial={{ opacity: 0, y: 20 }}
-         whileInView={{ opacity: 1, y: 0 }}
-         transition={{ duration: 1 }}
-         className="contact-page-heading">Our Address</motion.h2>
-        <motion.div
-         initial={{ opacity: 0 }}
-         whileInView={{ opacity: 1 }}
-         transition={{ duration: 1,delay:1 }}
-         className="contact-page-details">
-          <div className="contact-page-detail-item">
-            <FaEnvelope className="contact-page-icon" />
-            <a href="mailto:vikashmishra8371@gmail.com">
-              vikashmishra8371@gmail.com
-            </a>
-          </div>
-          <div className="contact-page-detail-item">
-            <FaPhoneAlt className="contact-page-icon" />
-            <a href="tel:+918979481819">+91 8979481819</a>
-          </div>
-          <div className="contact-page-detail-item">
-            <FaMapMarkerAlt className="contact-page-icon" />
-            <span>1032 Mathura, Uttar Pradesh, India</span>
-          </div>
-        </motion.div>
-      </div> */}
+     
     </div>
   );
 };

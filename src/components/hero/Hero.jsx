@@ -1,79 +1,224 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
-import MyImage from '../../assets/file.png'
 
 const Hero = () => {
   return (
-    <div id="home" className="min-h-screen bg-gradient-to-b from-[#deb887] to-[#f0d4a8] flex items-center justify-center p-4">
-      <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl max-w-6xl w-full mx-auto overflow-hidden">
-        <div className="p-8 md:p-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+    <div id="home" className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black flex items-center justify-center p-4 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-emerald-500/10 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full filter blur-3xl animate-pulse delay-500"></div>
+      </div>
+
+      {/* Grid pattern overlay */}
+      <div 
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }}
+      ></div>
+
+      <div className="relative z-10 bg-slate-800/40 backdrop-blur-md border border-slate-700/50 rounded-3xl shadow-2xl max-w-7xl w-full mx-auto overflow-hidden">
+        <div className="p-8 md:p-16">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
             <motion.div
-              className="w-full md:w-1/2"
+              className="w-full lg:w-3/5"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.9, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                Hello, I am <span className="text-[#c07107]">Vikash</span>
-              </h1>
-              <h3 className="text-2xl md:text-3xl mb-6 text-[#9b5808]">
+              {/* Main heading */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="mb-6"
+              >
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent leading-tight">
+                  Vikash<span className="text-slate-300">.</span>
+                </h1>
+                <div className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-full mb-4"></div>
+              </motion.div>
+
+              {/* Dynamic role typing */}
+              <motion.h2
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="text-2xl md:text-3xl lg:text-4xl font-mono font-bold mb-8 text-slate-200 min-h-[60px]"
+              >
+                <span className="text-emerald-400">&gt;</span>{" "}
                 <TypeAnimation
                   sequence={[
-                    'FullStack Developer',
-                    1000,
-                    'MernStack Developer',
-                    1000,
-                    'Nextjs Developer',
-                    1000,
-                    'DSA Enthusiast',
-                    1000
+                    'Full-Stack Developer',
+                    2000,
+                    'Digital Solutions Architect',
+                    2000,
+                    'Code Craftsman',
+                    2000,
+                    'Tech Innovation Partner',
+                    2000
                   ]}
                   wrapper="span"
                   speed={50}
                   repeat={Infinity}
+                  className="text-cyan-400"
                 />
-              </h3>
-              <p className="text-lg md:text-xl mb-8 text-gray-700">
-                Pursuing a bachelor's in Computer Science & Engineering. Enthusiastic about developing new wonders using the latest technologies.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+                <span className="animate-pulse text-emerald-400">|</span>
+              </motion.h2>
+
+              {/* Description */}
+              <motion.p
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                className="text-lg md:text-xl mb-8 text-slate-300 leading-relaxed font-light max-w-2xl"
+              >
+                Transforming ideas into powerful digital experiences. Specializing in modern web technologies, 
+                scalable architectures, and innovative solutions that drive business growth. Let's build something extraordinary together.
+              </motion.p>
+
+              {/* Stats */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="flex flex-wrap gap-8 mb-10"
+              >
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400">50+</div>
+                  <div className="text-sm text-slate-400 font-mono">Projects Delivered</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-emerald-400">3+</div>
+                  <div className="text-sm text-slate-400 font-mono">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-400">99%</div>
+                  <div className="text-sm text-slate-400 font-mono">Client Satisfaction</div>
+                </div>
+              </motion.div>
+
+              {/* CTA buttons */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1, duration: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
                 <a
-                  href="/Vikash-Resume.pdf"
-                  download="Vikash-Resume.pdf"
-                  className="bg-[#b2844a] text-white py-3 px-6 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-[#9b6d3a] hover:shadow-lg flex items-center justify-center"
+                  href="#projects"
+                  className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 hover:from-cyan-600 hover:to-blue-700 hover:shadow-lg hover:shadow-cyan-500/25 transform hover:-translate-y-1 flex items-center justify-center font-mono"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  <svg className="w-5 h-5 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0l-4-4m4 4l-4 4" />
                   </svg>
-                  My Resume
+                  View My Work
                 </a>
                 <a
                   href="#contact"
-                  className="border-2 border-[#b2844a] text-[#b2844a] py-3 px-6 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-[#b2844a] hover:text-white hover:shadow-lg flex items-center justify-center"
+                  className="group border-2 border-emerald-500 text-emerald-400 py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-emerald-500 hover:text-slate-900 hover:shadow-lg hover:shadow-emerald-500/25 transform hover:-translate-y-1 flex items-center justify-center font-mono"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg className="w-5 h-5 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
-                  Contact Me
+                  Let's Talk
                 </a>
-              </div>
+              </motion.div>
             </motion.div>
             
+            {/* Code visualization */}
             <motion.div
-              className="w-full md:w-1/2"
-              initial={{ scale: 0.5, opacity: 0 }}
+              className="w-full lg:w-2/5"
+              initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.2 }}
+              transition={{ duration: 1, delay: 0.3 }}
             >
-              <div className="relative w-full aspect-square">
-                <div className="absolute inset-0 bg-[#deb887] rounded-full filter blur-3xl opacity-50"></div>
-                <img 
-                  src="https://gifdb.com/images/high/programming-angry-punching-keyboard-fw45yh2e39g24ylb.gif" 
-                  alt="Person illustration" 
-                  className="relative z-10 w-full h-full object-contain"
-                />
+              <div className="relative">
+                {/* Terminal window */}
+                <div className="bg-slate-900 rounded-2xl shadow-2xl border border-slate-700 overflow-hidden">
+                  {/* Terminal header */}
+                  <div className="bg-slate-800 px-4 py-3 flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div className="ml-4 text-sm text-slate-400 font-mono">~/vikash-agency</div>
+                  </div>
+                  
+                  {/* Terminal content */}
+                  <div className="p-6 font-mono text-sm space-y-2">
+                    <div className="flex items-center text-emerald-400">
+                      <span className="text-cyan-400">$</span>
+                      <span className="ml-2">npm run create-awesome-project</span>
+                    </div>
+                    <div className="text-slate-500">
+                      <div>✨ Initializing project...</div>
+                      <div>📦 Installing dependencies...</div>
+                      <div>🚀 Setting up development server...</div>
+                      <div className="text-emerald-400">✅ Ready to build amazing things!</div>
+                    </div>
+                    
+                    <div className="mt-4 text-slate-400">
+                      <div className="text-cyan-400">const</div>
+                      <div className="ml-4">
+                        <span className="text-yellow-400">skills</span> = [
+                      </div>
+                      <div className="ml-8 text-green-400">
+                        'React', 'Node.js', 'Next.js',<br />
+                        'TypeScript', 'MongoDB', 'AWS'
+                      </div>
+                      <div className="ml-4">];</div>
+                    </div>
+                    
+                    <div className="flex items-center text-emerald-400 animate-pulse">
+                      <span className="text-cyan-400">$</span>
+                      <span className="ml-2">Building the future...</span>
+                      <span className="animate-ping">_</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating elements */}
+                <motion.div
+                  animate={{ 
+                    y: [0, -10, 0],
+                    rotate: [0, 5, 0]
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute -top-4 -right-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-3 rounded-xl shadow-lg"
+                >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </motion.div>
+
+                <motion.div
+                  animate={{ 
+                    y: [0, 10, 0],
+                    rotate: [0, -5, 0]
+                  }}
+                  transition={{ 
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  }}
+                  className="absolute -bottom-4 -left-4 bg-gradient-to-r from-emerald-500 to-green-500 text-white p-3 rounded-xl shadow-lg"
+                >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                  </svg>
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -84,4 +229,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

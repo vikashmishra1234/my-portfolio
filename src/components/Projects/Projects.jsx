@@ -1,121 +1,270 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Card from "./Card";
-
-// Import your images here
-import student from "../../assets/studextX1.jpg";
-import flipkart from "../../assets/Flipkart.jpg";
-import image from "../../assets/image.png";
-import scrap from "../../assets/scrap.png"
-import books from "../../assets/books.png"
-import priest from "../../assets/priest.jpg";
-import instagram from "../../assets/instagram.jpg";
-import tracker from "../../assets/tracker.png";
-
-const projectData = [
-  {
-    image: priest,
-    title: "The Priest Finder",
-    description: "Devotees can find priests in Vrindavan-Mathura, view popular temples and timings, and manage priests' profiles.",
-    link1: "https://priest-finder-web-app.onrender.com/",
-    link2: "https://github.com/vikashmishra1234/Tourist-guide",
-  },
-  {
-    image: image,
-    title: "Hostel Website for College",
-    description: "A website for BSA College Hostel. It includes a section for both hostlers and administrators.",
-    link1: "https://bsacollegehostel.vercel.app/",
-    link2: "https://github.com/vikashmishra1234/Hostle-Nextjs",
-  },
-  {
-    image: scrap,
-    title: "ChatGpt Conversation to pdf Converter",
-    description: "Save your Conversation with chat gpt in a pdf formate.this is a scraping project...",
-    link1: "https://chatgptpdf.vercel.app/",
-    link2: "https://github.com/vikashmishra1234/scrape-gpt",
-  },
-  {
-    image: books,
-    title: "Books Selling Website With Payment Gateway",
-    description: "In this website i am selling books,previous year papers and notes to the college student with realtime razor pay gateway",
-    link1: "https://books-selling.vercel.app/",
-    link2: "https://github.com/vikashmishra1234/books-selling",
-  },
-  {
-    image: student,
-    title: "E-Learning Platform",
-    description: "Web app for students to share notes, with an integrated AI chatbot using Google Gemini.",
-    link1: "https://student-study-website.vercel.app/",
-    link2: "https://github.com/vikashmishra1234/Student-Study-website",
-  },
-  {
-    image: flipkart,
-    title: "E-commerce Clone",
-    description: "A clone of Flipkart with functionality to search, add to cart, filter, and place orders.",
-    link1: "https://github.com/vikashmishra1234/Flipkart-clone",
-    link2: "https://github.com/vikashmishra1234/Flipkart-clone",
-  },
-  // {
-  //   image: instagram,
-  //   title: "Social Media Web App",
-  //   description: "Social media web app to connect with people, make video calls, share posts, add stories, and like or dislike posts.",
-  //   link1: "https://social-app-psi-six.vercel.app/",
-  //   link2: "https://github.com/vikashmishra1234/backend-expense-tracker",
-  // },
-  // {
-  //   image: tracker,
-  //   title: "Expense Tracker",
-  //   description: "A website to track expenses and income of individuals.",
-  //   link1: "https://expense-tracker-tan-three.vercel.app/",
-  //   link2: "https://github.com/vikashmishra1234/Expense-Tracker",
-  // },
-];
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Code, 
+  Database, 
+  Layout, 
+  Smartphone, 
+  Globe, 
+  Zap,
+  Menu,
+  X,
+  Home,
+  FolderOpen,
+  User,
+  Mail,
+  ArrowRight,
+  CheckCircle
+} from 'lucide-react';
 
 const Projects = () => {
+  const projectData = [
+    {
+      title: "The Priest Finder",
+      description: "Full-stack temple guide application connecting devotees with priests in Vrindavan-Mathura. Features real-time priest profiles, temple timings, and location services.",
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      category: "Full-Stack Web App",
+      liveLink: "https://priest-finder-web-app.onrender.com/",
+      githubLink: "https://github.com/vikashmishra1234/Tourist-guide",
+      features: ["Real-time Search", "Profile Management", "Location Services"]
+    },
+    {
+      title: "Smart Hostel Management",
+      description: "Comprehensive hostel management system for BSA College with dual interfaces for students and administrators. Streamlines accommodation processes and communication.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
+      category: "Education Platform",
+      liveLink: "https://bsacollegehostel.vercel.app/",
+      githubLink: "https://github.com/vikashmishra1234/Hostle-Nextjs",
+      features: ["Admin Dashboard", "Student Portal", "Real-time Updates"]
+    },
+    {
+      title: "ChatGPT PDF Converter",
+      description: "Innovative web scraping tool that converts ChatGPT conversations into professional PDF documents. Perfect for preserving important AI conversations.",
+      technologies: ["React", "Web Scraping", "PDF Generation", "Node.js"],
+      category: "Productivity Tool",
+      liveLink: "https://chatgptpdf.vercel.app/",
+      githubLink: "https://github.com/vikashmishra1234/scrape-gpt",
+      features: ["Auto Scraping", "PDF Export", "Clean Formatting"]
+    },
+    {
+      title: "EduBooks Marketplace",
+      description: "E-commerce platform for college students selling books, previous year papers, and study notes with integrated Razorpay payment gateway.",
+      technologies: ["React", "Node.js", "Razorpay", "MongoDB"],
+      category: "E-commerce Platform",
+      liveLink: "https://books-selling.vercel.app/",
+      githubLink: "https://github.com/vikashmishra1234/books-selling",
+      features: ["Payment Gateway", "Inventory Management", "Student Dashboard"]
+    },
+    {
+      title: "AI-Powered Learning Hub",
+      description: "Modern e-learning platform with integrated Google Gemini AI chatbot for personalized learning assistance and note sharing among students.",
+      technologies: ["React", "Google Gemini AI", "Firebase", "Material-UI"],
+      category: "EdTech Platform",
+      liveLink: "https://student-study-website.vercel.app/",
+      githubLink: "https://github.com/vikashmishra1234/Student-Study-website",
+      features: ["AI Chatbot", "Note Sharing", "Progress Tracking"]
+    },
+    {
+      title: "FlipCart E-commerce Clone",
+      description: "Feature-rich Flipkart clone with advanced search, filtering, cart management, and order processing capabilities. Built with modern React patterns.",
+      technologies: ["React", "Redux", "CSS3", "Local Storage"],
+      category: "E-commerce Clone",
+      liveLink: "https://github.com/vikashmishra1234/Flipkart-clone",
+      githubLink: "https://github.com/vikashmishra1234/Flipkart-clone",
+      features: ["Advanced Search", "Cart Management", "Order Processing"]
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        damping: 15
+      }
+    }
+  };
+
   return (
-    <section  className="py-24 bg-gradient-to-b from-[#f0d4a8] to-[#deb887]">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-24 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/6 w-64 h-64 bg-blue-500/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/6 w-80 h-80 bg-emerald-500/5 rounded-full filter blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-[#9b5808] mb-6">
-            My <span className="text-[#c07107]">Projects</span>
+          <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="inline-block mb-6"
+          >
+            <span className="text-blue-400 font-mono text-lg">&gt; projects.showcase()</span>
+          </motion.div>
+
+          <h2 className="text-5xl md:text-7xl font-black mb-8 bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+            Featured Work
           </h2>
-          <p className="text-xl md:text-2xl text-[#6b3d05] max-w-3xl mx-auto">
-            Explore my latest work and see how I bring ideas to life through code and creativity.
+          
+          <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+            Showcasing innovative solutions that solve real-world problems. Each project demonstrates 
+            technical excellence, user-centric design, and business impact.
           </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
         >
           {projectData.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              variants={itemVariants}
+              className="group relative"
             >
-              <Card
-                image={project.image}
-                title={project.title}
-                discription={project.description}
-                link1={project.link1}
-                link2={project.link2}
-              />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+              
+              <div className="relative bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 h-full transition-all duration-500 group-hover:border-blue-500/30 group-hover:shadow-lg group-hover:shadow-blue-500/10">
+                {/* Project Category */}
+                <div className="flex items-center justify-between mb-6">
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full font-mono border border-blue-500/30">
+                    {project.category}
+                  </span>
+                  <div className="flex space-x-3">
+                    <motion.a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1 }}
+                      className="text-slate-400 hover:text-emerald-400 transition-colors duration-300"
+                    >
+                      <Globe className="w-5 h-5" />
+                    </motion.a>
+                    <motion.a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1 }}
+                      className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                    >
+                      <Code className="w-5 h-5" />
+                    </motion.a>
+                  </div>
+                </div>
+
+                {/* Project Title */}
+                <h3 className="text-2xl font-bold mb-4 text-slate-200 group-hover:text-white transition-colors duration-300">
+                  {project.title}
+                </h3>
+                
+                {/* Project Description */}
+                <p className="text-slate-400 mb-6 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                  {project.description}
+                </p>
+                
+                {/* Key Features */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-mono text-emerald-400 mb-3">Key Features:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.features.map((feature, featureIndex) => (
+                      <span
+                        key={featureIndex}
+                        className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded font-mono border border-slate-600/50"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Technologies */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-mono text-cyan-400 mb-3">Tech Stack:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-full font-mono border border-cyan-500/30"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-3">
+                  <motion.a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ x: 5 }}
+                    className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-4 rounded-xl font-mono font-medium text-center transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+                  >
+                    Live Demo
+                  </motion.a>
+                  <motion.a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ x: 5 }}
+                    className="flex-1 border-2 border-emerald-500 text-emerald-400 py-3 px-4 rounded-xl font-mono font-medium text-center transition-all duration-300 hover:bg-emerald-500 hover:text-slate-900"
+                  >
+                    Source Code
+                  </motion.a>
+                </div>
+              </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center mt-20"
+        >
+          <p className="text-slate-400 mb-6 font-mono">
+            Interested in working together?
+          </p>
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.05 }}
+            className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white py-3 px-8 rounded-xl font-mono font-medium transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25"
+          >
+            Start a Project
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </motion.a>
         </motion.div>
       </div>
     </section>
   );
 };
-
 export default Projects;
-
