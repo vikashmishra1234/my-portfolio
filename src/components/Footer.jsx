@@ -1,21 +1,10 @@
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
   Code, 
-  Database, 
-  Layout, 
-  Smartphone, 
   Globe, 
-  Zap,
-  Menu,
-  X,
-  Home,
-  FolderOpen,
   User,
-  Mail,
-  ArrowRight,
-  CheckCircle
+
 } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();

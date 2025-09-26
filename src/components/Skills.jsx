@@ -126,12 +126,11 @@ const Skills = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-12 sm:mt-16 md:mt-20 text-center"
         >
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+          <div className="grid grid-cols-2  sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {[
-              { label: 'Years Experience', value: '3+', color: 'cyan' },
-              { label: 'Projects Completed', value: '50+', color: 'emerald' },
-              { label: 'Technologies Mastered', value: '15+', color: 'blue' },
-              { label: 'Client Satisfaction', value: '99%', color: 'green' }
+              { label: 'Years Experience', value: '1+', color: 'cyan' },
+              { label: 'Projects Completed', value: '15+', color: 'emerald' },
+              { label: 'Technologies Mastered', value: '10+', color: 'blue' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -139,7 +138,7 @@ const Skills = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.6 + (index * 0.1) }}
-                className="text-center"
+                className="text-center mx-auto"
               >
                 <div className={`text-2xl sm:text-3xl md:text-4xl font-black mb-1 sm:mb-2 text-${stat.color}-400`}>
                   {stat.value}

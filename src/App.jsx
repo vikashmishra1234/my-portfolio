@@ -1,5 +1,4 @@
 
-import ServicesSection from "./components/services/Services";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills";
@@ -14,7 +13,6 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <ServicesSection />
       <Projects />
       <Skills />
       <Contact />

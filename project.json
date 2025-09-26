@@ -1,57 +1,77 @@
 [
-    {
-      "title": "Varnika Research",
-      "description": "A professional academic writing platform offering thesis, dissertation, and research paper services for students and researchers.",
-      "technologies": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-      "category": "Frontend Web App",
-      "liveLink": "https://varnikaresearch.com/",
-      "githubLink": "#",
-      "features": ["Service Listings & Forms", "SEO-Optimized Pages", "Secure Contact & Quote Requests"]
-    },
-    {
-      "title": "Smart Hostel Management",
-      "description": "Comprehensive hostel management system for BSA College with dual interfaces for students and administrators. Streamlines accommodation processes and communication.",
-      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
-      "category": "Education Platform",
-      "liveLink": "https://bsacollegehostel.vercel.app/",
-      "githubLink": "https://github.com/vikashmishra1234/Hostle-Nextjs",
-      "features": ["Admin Dashboard", "Student Portal", "Real-time Updates"]
-    },
-    {
-      "title": "EduBooks Marketplace",
-      "description": "E-commerce platform for college students selling books, previous year papers, and study notes with integrated Razorpay payment gateway.",
-      "technologies": ["React", "Node.js", "Razorpay", "MongoDB"],
-      "category": "E-commerce Platform",
-      "liveLink": "https://books-selling.vercel.app/",
-      "githubLink": "https://github.com/vikashmishra1234/books-selling",
-      "features": ["Payment Gateway", "Inventory Management", "Student Dashboard"]
-    },
-    {
-      "title": "Anna Perry Insurance",
-      "description": "A bilingual insurance website offering detailed service information in both Russian and English. Built to serve clients across multiple insurance domains...",
-      "technologies": ["wordpress", "GT Translator", "Elementor", "WPForms"],
-      "category": "Business Website",
-      "liveLink": "https://annaperryinsurance.com/",
-      "githubLink": "https://github.com/vikashmishra1234/",
-      "features": [" Bilingual Support (RU/EN)", " Service Pages", "Responsive Contact Form"]
-    },
-    {
-      "title": "JMI Sports DC",
-      "description": "A modern and responsive website for JMI Sports DC, showcasing their sports marketing partnerships, services, and media presence.",
-      "technologies": ["wordpress", "GT Translator", "Elementor", "WPForms"],
-      "category": "Sports Business Website",
-      "liveLink": "https://jmisportsdc.com/",
-      "githubLink": "https://github.com/vikashmishra1234",
-      "features": [" Partnership Showcase", " Media & News Sections", "Fully Responsive Layout"]
-    },
-    {
-      "title": "Lorain Kartplex",
-      "description": "A high-performance website for Lorain Kartplex, a premier go-kart racing facility. Designed for speed and user experience, the site includes event booking...",
-      "technologies": ["wordpress", "GT Translator", "Elementor", "WPForms"],
-      "category": " Business Website",
-      "liveLink": "https://www.lorainkartplex.com/",
-      "githubLink": "https://github.com/vikashmishra1234",
-      "features": [" Event & Pricing Information", " Track Overview & Gallery", "Mobile-Optimized Design"]
-    }
-
+  {
+  "title": "SpecsVue",
+  "description": "An online eyewear destination offering eyeglasses, sunglasses, screen glasses, contact lenses, and kids' eyewear with premium materials, advanced lens technologies, and stylish designs.",
+  "technologies": ["Next.js", "Tailwind CSS","TypeScript", "E-commerce Integration", "Razorpay"],
+  "category": "E-commerce Website",
+  "liveLink": "https://specsvue.in/",
+  "githubLink": "https://github.com/vikashmishra1234",
+  "features": [
+    "Product Catalog",
+    "Responsive Design",
+    "Secure Checkout",
+    "Contact & Support"
   ]
+}
+,
+    {
+    "title": "MavsTV — Dallas Mavericks Streaming Platform",
+    "description": "The official streaming service of the Dallas Mavericks, featuring live games, replays, highlights, and exclusive content. Accessible across devices with regional restrictions and subscription plans.",
+    "technologies": ["Next.js", "Tailwind CSS", "Video CDN", "NBA ID Auth"],
+    "category": "Sports Streaming",
+    "liveLink": "https://www.nba.com/mavs/mavstv",
+    "githubLink": "https://github.com/vikashmishra1234",
+    "features": [
+      "Live Games",
+      "On-Demand Replays",
+      "Exclusive Content",
+      "Multi-Device Access"
+    ]
+  },
+  {
+    "title": "Varnika Research",
+    "description": "A professional academic writing platform offering thesis, dissertation, and research paper services for students and researchers.",
+    "technologies": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+    "category": "Frontend Web App",
+    "liveLink": "https://varnikaresearch.com/",
+    "githubLink": "#",
+    "features": [
+      "Service Listings & Forms",
+      "SEO-Optimized Pages",
+      "Secure Contact & Quote Requests"
+    ]
+  },
+  {
+    "title": "Smart Hostel Management",
+    "description": "Comprehensive hostel management system for BSA College with dual interfaces for students and administrators. Streamlines accommodation processes and communication.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "category": "Education Platform",
+    "liveLink": "https://bsacollegehostel.vercel.app/",
+    "githubLink": "https://github.com/vikashmishra1234/Hostle-Nextjs",
+    "features": ["Admin Dashboard", "Student Portal", "Real-time Updates"]
+  },
+  {
+    "title": "EduBooks Marketplace",
+    "description": "E-commerce platform for college students selling books, previous year papers, and study notes with integrated Razorpay payment gateway.",
+    "technologies": ["React", "Node.js", "Razorpay", "MongoDB"],
+    "category": "E-commerce Platform",
+    "liveLink": "https://books-selling.vercel.app/",
+    "githubLink": "https://github.com/vikashmishra1234/books-selling",
+    "features": ["Payment Gateway", "Inventory Management", "Student Dashboard"]
+  },
+
+  {
+    "title": "JMI Sports DC",
+    "description": "A modern and responsive website for JMI Sports DC, showcasing their sports marketing partnerships, services, and media presence.",
+    "technologies": ["wordpress", "GT Translator", "Elementor", "WPForms"],
+    "category": "Sports Business Website",
+    "liveLink": "https://jmisportsdc.com/",
+    "githubLink": "https://github.com/vikashmishra1234",
+    "features": [
+      " Partnership Showcase",
+      " Media & News Sections",
+      "Fully Responsive Layout"
+    ]
+  }
+ 
+]

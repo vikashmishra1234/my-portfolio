@@ -1,22 +1,15 @@
 
 
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Code, 
-  Database, 
-  Layout, 
-  Smartphone, 
-  Globe, 
-  Zap,
   Menu,
   X,
   Home,
   FolderOpen,
   User,
   Mail,
-  ArrowRight,
-  CheckCircle
 } from 'lucide-react';
 
 // Navbar Component
